@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Add user</h3><hr>
+      <form method='post' action='{{url_for("add_user")}}'>
+          <label>Park Name</label>
+          <input type='text' name='parkName' required class='form-control'>
+          <label>State</label>
+          <input type='text' name='state' required class='form-control'>
+          <label>Year Visited</label>
+          <input type='number' name='yearVisited' required class='form-control'>
+          <label>Rating</label>
+          <input type='number' step = "any" min="0" max="5" name='rating' required class='form-control'>
+          <label>Comments</label>
+          <input type='text' name='comments' required class='form-control'>
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    </div>
+  
+  </div>
+{% endblock %}
